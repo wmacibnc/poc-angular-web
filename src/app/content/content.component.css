@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Crete+Round|Poppins');
 
 .wrapper-content {
-    width: 100vw;
-    height: 70vh;
+    height: 250px;
     z-index: -9999;
     top: -60px;
 }
@@ -38,10 +37,9 @@
 	bottom: 0;
 	min-width: 100%; 
 	min-height: 100%;
-	width: auto; 
+	width: 98%; 
 	height: auto; 
 	z-index: -1000;
-	background: url('https://github.com/daniloagostinho/traning-book/blob/master/src/assets/images/bg_banking.png?raw=true') no-repeat;
 	background-size: cover; 
 }
 .btn-home-cadastro-clientes {
