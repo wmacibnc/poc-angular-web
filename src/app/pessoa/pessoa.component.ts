@@ -13,6 +13,7 @@ export class PessoaComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		debugger
 		this.apiService.todos().subscribe((data:  Array<object>) => {
 			//this.contacts  =  data;
 			console.log(data);
