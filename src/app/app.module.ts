@@ -14,13 +14,20 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { PessoaComponent } from './pessoa/pessoa.component';
 
+import { ContaComponent } from './conta/conta.component';
+import { ServicoComponent } from './servico/servico.component';
+import { TransacaoComponent } from './transacao/transacao.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ContentComponent,
     FooterComponent,
-    PessoaComponent
+    PessoaComponent,
+    ContaComponent,
+    ServicoComponent,
+    TransacaoComponent
   ],
   imports: [
     BrowserModule,

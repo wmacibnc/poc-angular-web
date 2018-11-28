@@ -22,52 +22,48 @@ export class PessoaComponent implements OnInit {
 	}
 	
 	ngOnInit() {
-		this.apiService.obter().subscribe((data:  Array<object>) => {
-			this.servicos = data;
-			console.log(data);
-		});
+		// this.apiService.obter().subscribe((data:  Array<object>) => {
+		// 	this.servicos = data;
+		// });
+		// this.apiService.obterNumeroConta().subscribe((data:  any) => {
+		// 	if(data){
+		// 		this.apiService.obterTransacoes(data).subscribe((data:  Array<object>) => {
+		// 			this.transacoes = data;
+		// 			for (let i in this.transacoes) {
+		// 				this.saldo = this.saldo - this.transacoes[i].valor;
+		// 			}
 		
-		this.apiService.obterTransacoes(5).subscribe((data:  Array<object>) => {
-			this.transacoes = data;
-			console.log(data);
-			for (let i in this.transacoes) {
-				this.saldo = this.saldo - this.transacoes[i].valor;
-			}
-
-		});
+		// 		});
+		// 	}
+		// });
 	}
 	
 	criarConta(){
-		let conta = {
-			pessoa:{
-				nome:this.nomeText
-			}
-		}
+		// let conta = {
+		// 	pessoa:{
+		// 		nome:this.nomeText
+		// 	}
+		// }
 		
-		this.apiService.novoCadastro(conta).subscribe((data:  any) => {
-			console.log(data);
-			debugger
-			this.apiService.atualizarNumeroConta(data.id).subscribe((data:  any) => {
-				alert("Conta Criada com sucesso! Anote o número da sua conta: 000" + data.id);
-				console.log(data);
-			});
-			debugger
-		});
+		// this.apiService.novoCadastro(conta).subscribe((data:  any) => {
+		// 	this.apiService.atualizarNumeroConta(data.id).subscribe((data:  any) => {
+		// 		alert("Conta Criada com sucesso! Anote o número da sua conta: 000" + data.id);
+		// 	});
+		// });
 	}
 	salvar(){
-		this.apiService.obterNumeroConta().subscribe((data:  any) => {
-			alert(data);
-		});
-		let transacao ={
-			conta: {id:5},
-			servico: this.servico1,
-			valor: this.valor1
-		}
-		this.apiService.novaTransacao(transacao).subscribe((data:  any) => {
-			console.log(data);
-			alert(this.servico1.descricao + " realizado(a) com sucesso!");
-			debugger
-		});
+		// this.apiService.obterNumeroConta().subscribe((data:  any) => {
+		// 	let transacao ={
+		// 		conta: {id:data},
+		// 		servico: this.servico1,
+		// 		valor: this.valor1
+		// 	}
+
+		// 	this.apiService.novaTransacao(transacao).subscribe((data:  any) => {
+		// 		alert(this.servico1.descricao + " realizado(a) com sucesso!");
+
+		// 	});
+		// });
 	}
 	
 }

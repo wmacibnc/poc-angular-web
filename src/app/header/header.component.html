@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-8">
       <ul class="menu-header">
-        <li><b>Abra sua conta</b></li>
+        <li><b>Olá, {{nome}}</b></li>
       </ul>
     </div>
     <div class="col-xs-12 col-md-4">
@@ -13,11 +13,11 @@
               <label class="form-check-label" for="autoSizingCheck2">
                 <b>Acesse</b> sua conta
               </label>
-              <input type="text" class="form-control" id="inlineFormInputName" placeholder="Digite seu CPF">
+              <input type="text" class="form-control" #numeroConta id="inlineFormInputName" placeholder="Número da Conta">
             </div>
           </div>
           <div class="col-auto my-1">
-            <button type="submit" class="btn btn-primary acessar-conta">Acessar</button>
+            <button (click)="atualizarNumeroConta(numeroConta.value)" class="btn btn-primary acessar-conta">Acessar</button>
           </div>
         </div>
       </form>

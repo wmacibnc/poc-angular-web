@@ -1,0 +1,13 @@
+<div class="container">
+  
+  <h4 class="h4">Abra sua conta</h4>
+  <p class="form-text  text-muted"> * Informe o seu nome para criar sua conta no uHuBank.</p>
+  
+  
+  <div class="form-group  col-md-6">
+    <input type="text" class="form-control" [(ngModel)]="nomeText" id="nomeText" aria-describedby="emailHelp" placeholder="Seu nome">
+    <small id="emailHelp" class="form-text text-muted">Sua conta em um minuto.</small>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="criarConta()">Criar conta grátis</button>
+  
+</div>

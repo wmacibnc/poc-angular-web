@@ -5,17 +5,17 @@ import { HttpClient} from  '@angular/common/http';
 	providedIn:  'root'
 })
 
-export  class  PessoaService {
+export  class  ContaService {
 	
 	API_URL  =  'http://localhost:9093/poc-exemplo/conta/';
 	constructor(private  httpClient:  HttpClient) {}
 
-	atualizarNumeroConta(numeroConta){
-		return  this.httpClient.put(`${this.API_URL}atualizar/`+ numeroConta,null);
+	novoCadastro(conta){
+		return  this.httpClient.post(`${this.API_URL}novo-cadastro`, conta);
 	}
 
-	obterNomeConta(){
-		return  this.httpClient.get(`${this.API_URL}obter-nome-conta`);
+	atualizarNumeroConta(numeroConta){
+		return  this.httpClient.put(`${this.API_URL}atualizar/`+ numeroConta,null);
 	}
 
 }
