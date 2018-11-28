@@ -7,6 +7,7 @@ import { HttpClientModule } from  '@angular/common/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,6 +26,7 @@ import { PessoaComponent } from './pessoa/pessoa.component';
     BrowserModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],
