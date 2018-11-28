@@ -15,9 +15,9 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit() {
-      this.apiService.obterNomeConta().subscribe((data2:  any) => {
-        if(data2){
-          this.nome = data2;
+      this.apiService.obterNomeConta().subscribe((data:  any) => {
+        if(data){
+          this.nome = data.nome;
         }
       });
     }
@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
   atualizarNumeroConta(numeroConta){
     this.apiService.atualizarNumeroConta(numeroConta).subscribe((data2:  any) => {
       alert("Que bom que você voltou!!!");
+      window.location.reload();
     });
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContaService } from  './conta.service';
 import { FormsModule } from '@angular/forms'; 
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -12,7 +13,7 @@ export class ContaComponent{
 	
 	nomeText : any;
 	
-	constructor(private  apiService: ContaService) {
+	constructor(private  apiService: ContaService, private router: Router) {
 	}
 	
 	criarConta(){
@@ -25,6 +26,8 @@ export class ContaComponent{
 		this.apiService.novoCadastro(conta).subscribe((data:  any) => {
 			this.apiService.atualizarNumeroConta(data.id).subscribe((data2:  any) => {
 				alert("Conta Criada com sucesso! Anote o número da sua conta: 000" + data.id);
+				this.router.navigate(['/transacao']);
+
 			});
 		});
 	}	

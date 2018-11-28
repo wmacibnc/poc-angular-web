@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicoService } from  './servico.service';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ServicoComponent implements OnInit {
 	valor1: any;
 	servicos : any;
 	
-	constructor(private  apiService: ServicoService) {
+	constructor(private  apiService: ServicoService, private router: Router) {
 	}
 	
 	ngOnInit() {
@@ -33,7 +34,7 @@ export class ServicoComponent implements OnInit {
 
 			this.apiService.novaTransacao(transacao).subscribe((data:  any) => {
 				alert(this.servico1.descricao + " realizado(a) com sucesso!");
-
+				this.router.navigate(['/transacao']);
 			});
 		});
 	}
